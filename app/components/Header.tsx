@@ -56,6 +56,7 @@ export default function Header(){
                         animate={{
                         fill: open ? '#1D818B' : '#F9F8F8'
                         }}
+                        transition={{duration: 0}}
                         width="38" height="38" fill="white"/>
                         <motion.rect
                         animate={{
@@ -90,7 +91,7 @@ export default function Header(){
                     <Link href='/'>Home</Link>
                     <Link href='/'>About Us</Link>
                     <details className="dropdown">
-                    <summary className="">Get involved</summary>
+                    <summary className="cursor-pointer">Get involved</summary>
                     <ul className="flex flex-col dropdown-content z-[1] menu">
                     <Link href='/'>Donate</Link>
                     <Link href='/'>Foster</Link>
@@ -98,7 +99,7 @@ export default function Header(){
                     </ul>
                     </details>
                     <details className="dropdown">
-                    <summary className="">Get involved</summary>
+                    <summary className="cursor-pointer">Get involved</summary>
                     <ul className="flex flex-col dropdown-content z-[1] menu">
                     <Link href='/'>Adoptable Dogs</Link>
                     <Link href='/'>Adoption Qualifications</Link>
@@ -111,11 +112,11 @@ export default function Header(){
             </div>
              {/* ========================= */}
             {open && (<motion.div
-                    className={`bg-blue h-[80vh] justify-around text-white flex flex-col text-center font-[900] text-[2.25rem] w-full top-[7vh] left-0 md:hidden ${open ? '' : 'hidden'}`}
+                    className={`bg-gradient-to-b from-blue to-lightblue h-[80vh] justify-around text-white flex flex-col text-center font-[900] text-[2.25rem] w-full top-[7vh] left-0 md:hidden ${open ? '' : 'hidden'}`}
                     >
                      <Link href='/'>Home</Link>
                     <Link href='/'>About Us</Link>
-                    <p onClick={toggleInvolved}>Get involved</p>
+                    <p className='cursor-pointer' onClick={toggleInvolved}>Get involved</p>
                     <AnimatePresence>
                         {showGetinvolved && (
                         <motion.div
@@ -133,7 +134,7 @@ export default function Header(){
                         </motion.div>
                         )}
                      </AnimatePresence>
-                    <p onClick={toggleAdopt}>Adopt</p>
+                    <p className='cursor-pointer' onClick={toggleAdopt}>Adopt</p>
                     <AnimatePresence>
                         {showAdopt && (
                         <motion.div
