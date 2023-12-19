@@ -82,33 +82,33 @@ export default function Header(){
                 </div>
                 <div className='hidden md:flex justify-around gap-5 w-fit pr-5'>
                     <Link href='/'>Home</Link>
-                    <Link href='/'>About Us</Link>
+                    <Link href='/about-us'>About Us</Link>
                     <details className="dropdown">
                     <summary className="cursor-pointer">Get involved</summary>
                     <ul className="flex flex-col dropdown-content z-[1] menu">
-                    <Link href='/'>Donate</Link>
-                    <Link href='/'>Foster</Link>
-                    <Link href='/'>Volunteer</Link>
+                    <Link href='/get-involved/donate'>Donate</Link>
+                    <Link href='/get-involved/foster'>Foster</Link>
+                    <Link href='/get/involved/volunteer'>Volunteer</Link>
                     </ul>
                     </details>
                     <details className="dropdown">
                     <summary className="cursor-pointer">Get involved</summary>
                     <ul className="flex flex-col dropdown-content z-[1] menu">
-                    <Link href='/'>Adoptable Dogs</Link>
-                    <Link href='/'>Adoption Qualifications</Link>
-                    <Link href='/'>Adoption Application</Link>
+                    <Link href='/adopt/adoptable-dogs'>Adoptable Dogs</Link>
+                    <Link href='/adopt/adoption-qualifications'>Adoption Qualifications</Link>
+                    <Link href='adopt/adoption-application'>Adoption Application</Link>
                     </ul>
                     </details>
-                    <Link href='/'>Events</Link>
-                    <Link href='/'>Contact</Link>
+                    <Link href='/events'>Events</Link>
+                    <Link href='/contact'>Contact</Link>
                 </div>
             </div>
              {/* ========================= */}
             {open && (<motion.div
                     className={`bg-gradient-to-b from-blue to-lightblue h-[80vh] overflow-scroll justify-around text-white flex flex-col text-center font-[900] text-[2.25rem] w-full pt-0 left-0 md:hidden ${open ? '' : 'hidden'}`}
                     >
-                     <Link href='/'>Home</Link>
-                    <Link href='/'>About Us</Link>
+                    <Link onClick={toggleOpen} href='/'>Home</Link>
+                    <Link onClick={toggleOpen} href='/about-us'>About Us</Link>
                     <p className='cursor-pointer' onClick={toggleInvolved}>Get involved</p>
                     <AnimatePresence>
                         {showGetinvolved && (
@@ -120,9 +120,9 @@ export default function Header(){
                             transition={{ duration: 0.7 }}
                         >
                             <div></div>
-                            <Link href='/'>Donate</Link>
-                            <Link href='/'>Foster</Link>
-                            <Link href='/'>Volunteer</Link>
+                            <Link onClick={toggleOpen} href='/get-involved/donate'>Donate</Link>
+                            <Link onClick={toggleOpen} href='/get-involved/foster'>Foster</Link>
+                            <Link onClick={toggleOpen} href='/get-involved/volunteer'>Volunteer</Link>
                             <div></div>
                         </motion.div>
                         )}
@@ -138,15 +138,15 @@ export default function Header(){
                         transition={{ duration: 0.7 }}
                         >
                             <div></div>
-                            <Link href='/'>Adoptable Dogs</Link>
-                            <Link href='/'>Adoption Qualifications</Link>
-                            <Link href='/'>Adoption Application</Link>
+                            <Link onClick={toggleOpen} href='/adopt/adoptable-dogs'>Adoptable Dogs</Link>
+                            <Link onClick={toggleOpen} href='/adopt/adoption-qualifications'>Adoption Qualifications</Link>
+                            <Link onClick={toggleOpen} href='/adopt/adoption-application'>Adoption Application</Link>
                             <div></div>
                         </motion.div>
                         )}
                     </AnimatePresence>
-                    <Link href='/'>Events</Link>
-                    <Link href='/'>Contact</Link>   
+                    <Link onClick={toggleOpen} href='/events'>Events</Link>
+                    <Link onClick={toggleOpen} href='/contact'>Contact</Link>   
                     <div></div>
                     <div></div>
             </motion.div>)}
