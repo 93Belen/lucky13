@@ -3,6 +3,7 @@ import Logo from "./assets/Logo";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import Link from "@/node_modules/next/link";
+import Image from "@/node_modules/next/image";
 
 
 export default function Header(){
@@ -39,7 +40,7 @@ export default function Header(){
         <header className={`w-screen md:bg-white ${open ? 'bg-blue' : ''}`}>
             <div className='w-[100%] flex justify-between px-[1.3rem] py-[2.8rem] h-[7vh] items-center'>
                 <div className='w-[50px]'>
-                    <Logo/>
+                    <Image alt='' height={2000} width={2000} src={'/Screenshot 2023-12-13 at 5.31.33 AM.png'} />
                 </div>
                 <div className='md:hidden'>
                     <AnimatePresence>
