@@ -1,15 +1,26 @@
 'use client'
 import Logo from "./assets/Logo";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "@/node_modules/next/link";
 
 
 export default function Header(){
     const [open, setOpen] = useState<boolean>(false);
     const toggleOpen = () => {
-        setOpen(!open)
+        setOpen((state) => !state)
     }
+
+    useEffect(() => {
+        if (open) {
+          document.body.classList.add('disable-scroll');
+        } else {
+          document.body.classList.remove('disable-scroll');
+        }
+      }, [open]);
+
+
+
     return(
         <header className={`w-screen ${open ? 'bg-blue' : ''}`}>
             <div className='w-[100%] flex justify-between px-[1.3rem] py-[2.8rem] h-[7vh] items-center'>
@@ -72,7 +83,7 @@ export default function Header(){
             </div>
              {/* ========================= */}
             <motion.div
-                    className={`bg-blue h-[75vh] justify-around text-white flex flex-col text-center font-[900] text-[2.25rem] w-full top-[7vh] left-0 md:hidden ${open ? '' : 'hidden'}`}
+                    className={`bg-blue h-[80vh] justify-around text-white flex flex-col text-center font-[900] text-[2.25rem] w-full top-[7vh] left-0 md:hidden ${open ? '' : 'hidden'}`}
                     motion={{
                         display: open ? 'flex' : 'none'
                     }}
