@@ -8,11 +8,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        sans: ['var(--font-montserrat)'],
+        mono: ['var(--font-syncopate)']
       },
+    },
+    colors: {
+      'blue':'#1D818B',
+      'lightblue':'#46AEB9',
+      'yellow':"#F1EB98",
+      'black':'#313231',
+      'white':'#F9F8F8',
     },
   },
   plugins: [],
