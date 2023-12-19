@@ -29,7 +29,7 @@ export default function Header(){
 
 
     return(
-        <header className={`w-screen md:bg-white ${open ? 'bg-blue fixed top-0' : ''}`}>
+        <header className={`w-screen md:bg-white text-black ${open ? 'bg-blue fixed top-0' : ''}`}>
             <div className='w-[100%] flex justify-between px-[1.3rem] py-[2.8rem] h-[10vh] items-center'>
                 <div className='w-[50px]'>
                     <Image alt='' height={2000} width={2000} src={'/Screenshot 2023-12-13 at 5.31.33 AM.png'} />
@@ -88,15 +88,15 @@ export default function Header(){
                     <ul className="flex flex-col dropdown-content z-[1] menu">
                     <Link href='/get-involved/donate'>Donate</Link>
                     <Link href='/get-involved/foster'>Foster</Link>
-                    <Link href='/get/involved/volunteer'>Volunteer</Link>
+                    <Link href='/get-involved/volunteer'>Volunteer</Link>
                     </ul>
                     </details>
                     <details className="dropdown">
-                    <summary className="cursor-pointer">Get involved</summary>
-                    <ul className="flex flex-col dropdown-content z-[1] menu">
+                    <summary className="cursor-pointer">Adopt</summary>
+                    <ul className="flex flex-col dropdown-content z-[1] menu w-fit">
                     <Link href='/adopt/adoptable-dogs'>Adoptable Dogs</Link>
                     <Link href='/adopt/adoption-qualifications'>Adoption Qualifications</Link>
-                    <Link href='adopt/adoption-application'>Adoption Application</Link>
+                    <Link href='/adopt/adoption-application'>Adoption Application</Link>
                     </ul>
                     </details>
                     <Link href='/events'>Events</Link>
