@@ -21,6 +21,6 @@ const config: Config = {
       'white':'#F9F8F8',
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }
 export default config
