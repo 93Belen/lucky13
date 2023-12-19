@@ -13,3 +13,11 @@ h2 {
   font-family: "Syncopate";
   font-weight: 400;
 }
+html{
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+body{
+  box-sizing: border-box;
+  overflow-x: hidden;
+}

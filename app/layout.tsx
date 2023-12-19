@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { Montserrat} from 'next/font/google'
+import Header from './components/Header'
 
 
 export const metadata: Metadata = {
@@ -28,6 +29,7 @@ export default function RootLayout({
   return (
     <html className={`${montserrat.className}`} lang="en">
       <body>
+        <Header/>
         {children}
       </body>
     </html>
