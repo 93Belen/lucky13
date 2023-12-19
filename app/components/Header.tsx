@@ -26,19 +26,11 @@ export default function Header(){
         setShowGetinvolved(false)
     }
 
-    useEffect(() => {
-        if (open) {
-          document.body.classList.add('disable-scroll');
-        } else {
-          document.body.classList.remove('disable-scroll');
-        }
-      }, [open]);
-
 
 
     return(
-        <header className={`w-screen md:bg-white ${open ? 'bg-blue' : ''}`}>
-            <div className='w-[100%] flex justify-between px-[1.3rem] py-[2.8rem] h-[7vh] items-center'>
+        <header className={`w-screen fixed top-0 md:bg-white ${open ? 'bg-blue' : ''}`}>
+            <div className='w-[100%] flex justify-between px-[1.3rem] py-[2.8rem] h-[10vh] items-center'>
                 <div className='w-[50px]'>
                     <Image alt='' height={2000} width={2000} src={'/Screenshot 2023-12-13 at 5.31.33 AM.png'} />
                 </div>
@@ -58,7 +50,7 @@ export default function Header(){
                         fill: open ? '#1D818B' : '#F9F8F8'
                         }}
                         transition={{duration: 0}}
-                        width="38" height="38" fill="white"/>
+                        width="38" height="38" fill="#F9F8F8"/>
                         <motion.rect
                         animate={{
                         opacity: open ? 0 : 1
@@ -113,7 +105,7 @@ export default function Header(){
             </div>
              {/* ========================= */}
             {open && (<motion.div
-                    className={`bg-gradient-to-b from-blue to-lightblue h-[80vh] justify-around text-white flex flex-col text-center font-[900] text-[2.25rem] w-full top-[7vh] left-0 md:hidden ${open ? '' : 'hidden'}`}
+                    className={`bg-gradient-to-b from-blue to-lightblue h-[80vh] overflow-scroll justify-around text-white flex flex-col text-center font-[900] text-[2.25rem] w-full pt-0 left-0 md:hidden ${open ? '' : 'hidden'}`}
                     >
                      <Link href='/'>Home</Link>
                     <Link href='/'>About Us</Link>
@@ -155,6 +147,7 @@ export default function Header(){
                     </AnimatePresence>
                     <Link href='/'>Events</Link>
                     <Link href='/'>Contact</Link>   
+                    <div></div>
                     <div></div>
             </motion.div>)}
         </header>
