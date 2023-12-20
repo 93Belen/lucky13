@@ -28,7 +28,7 @@ export default function Header(){
 
 
     return(
-        <header className={`w-screen md:bg-white text-black h-[15vh] ${open ? 'bg-blue fixed top-0' : ''}`}>
+        <header className={`w-screen md:bg-white text-black h-[20vh] ${open ? 'bg-blue fixed top-0' : ''}`}>
             <div className='w-[100%] flex justify-between px-[1.3rem] py-[2.8rem] h-[10vh] items-center'>
                 <div className='w-[50px]'>
                     <Image alt='' height={2000} width={2000} src={'/Screenshot 2023-12-13 at 5.31.33 AM.png'} />
