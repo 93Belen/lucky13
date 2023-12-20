@@ -31,7 +31,7 @@ export default function RootLayout({
     <html className={`${montserrat.className}`} lang="en">
       <body className='bg-white min-h-screen'>
         <Header/>
-        <main className="w-screen min-h-[55vh] bg-yellow h-fit">
+        <main className="w-screen min-h-[55vh] md:min-h-[70vh] bg-yellow h-fit">
         {children}
         </main>
         <Footer/>
