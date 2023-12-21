@@ -16,7 +16,7 @@ export default function Footer(){
 
 
     return (
-        <footer className='bg-blue md:pb-16 p-5 md:gap-5 gap-4 box-border md:p-7 w-full h-fit min-h-[20vh] md:h-[20vh] grid grid-cols-[15%_85%] grid-rows-[fit-content_40%_40%] md:grid-cols-[20%_40%_40%] md:grid-rows-[80%_20%]'>
+        <footer className='bg-blue md:p-12 p-5 md:gap-5 gap-4 box-border w-full h-fit min-h-[20vh] md:min-h-[20vh] grid grid-cols-[15%_85%] grid-rows-[fit-content_40%_40%] md:grid-cols-[20%_40%_40%] md:grid-rows-[80%_20%]'>
             <div className='text-white md:flex md:gap-4 md:justify-around h-fit w-[85%] col-span-2 md:col-start-2 md:col-span-1'>
                 <h3 className='font-[800] flex items-center justify-between md:hidden' onClick={toggleOpen}>NAVIGATION <span>
                     <motion.svg
