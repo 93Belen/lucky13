@@ -1,9 +1,27 @@
+'use client'
 import Image from 'next/image'
+import { useState } from 'react'
+import { motion } from 'framer-motion'
 
 export default function Home() {
+  const [scroll, setScroll] = useState(false)
+
+  const scrollUp = () => {
+    setScroll(true)
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    })
+  }
+
   return (
     <>
-    <div className='bg-blue fixed top-0 h-screen w-screen' >
+    <motion.div
+    onClick={scrollUp}
+    transition={{ duration: 2}}
+    layout
+     className={`bg-blue fixed ${!scroll ? 'top-0': 'top-[-200vh]'} h-screen w-screen`} >
       <div className='absolute top-0 left-0 text-white text-center w-full h-full flex flex-col pt-[5rem] md:pt-[19rem]'>
         <h1 className='text-[2rem] font-[700] md:text-[4.5rem]'>Lucky 13 Rescue</h1>
         <p className='text-[1rem] font-[300] md:text-[1.25rem]'>You can't change a dog's past, but you can rewrite their future!</p>
@@ -15,7 +33,7 @@ export default function Home() {
         </div>
       </div>
       <Image className='mix-blend-overlay object-cover h-full w-full object-center relative top-0'  alt='' height={2000} width={2000} src={'/IMG_6059 2.jpg.jpg'} />
-    </div>
+    </motion.div>
     </>
   )
 }
